@@ -1,36 +1,48 @@
 ---
-title: Welcome to Starlight
+title: 何にお困りですか？
 description: Get started building your docs site with Starlight.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: 操作マニュアルは下記ボタンから、キーワード検索はヘッダーの検索ボックスからご利用ください。
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/furusatos_lg_color_symbol 1.png
   actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
+    - text: 機能で調べる
+      link: '#機能で調べる'
+      icon: down-caret
       variant: primary
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: よくある質問
+      link: '#よくある質問'
+      icon: down-caret
+      variant: primary
 ---
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+## 機能で調べる
+<LinkCard title="自治体関係者向け" href="lg/" />
 
-## Next steps
+<CardGrid>
+  <LinkCard title="店舗管理者向け" href="#" />
+  <LinkCard title="店舗スタッフ向け" href="#" />
+</CardGrid>
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+## よくある質問
+<CardGrid>
+  <LinkCard title="よくある質問1" href="#" />
+  <LinkCard title="よくある質問2" href="#" />
+  <LinkCard title="よくある質問3" href="#" />
+  <LinkCard title="よくある質問4" href="#" />
+  <LinkCard title="よくある質問5" href="#" />
+  <LinkCard title="よくある質問6" href="#" />
+</CardGrid>
+
+[よくある質問一覧を見る](#)
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+<CardGrid>
+  <LinkCard title="リリースノート" href="#" />
+  <LinkCard title="お役立ちツール" href="#" />
 </CardGrid>

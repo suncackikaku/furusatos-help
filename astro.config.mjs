@@ -5,12 +5,37 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: '店舗型ふるさと納税 ふるさとズ ヘルプサイト',
+			favicon: '/favicon.svg',
+			logo: {
+				alt: 'ふるさとズ',
+				replacesTitle: true,
+				light: './src/assets/images/furusatos_header_logo.svg',
+				dark: './src/assets/images/furusatos_header_logo.svg',
+			},
+			customCss: [
+				'./src/assets/styles/custom.css',
+			],
+			locales: {
+				root: {
+					label: '日本語',
+					lang: 'ja',
+				},
+			},
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
 			sidebar: [
 				{
+					label: '自治体関係者向け',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'トップページ', link: '/lg/' },
+						{ label: '登録店舗', link: '/lg/shop/' },
+						{ label: 'お知らせ管理', link: '/lg/news/' },
+						{ label: '注文管理', link: '/lg/order/' },
+					],
+				},				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.

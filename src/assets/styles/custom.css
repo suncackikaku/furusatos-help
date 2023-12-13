@@ -1,0 +1,10 @@
+/* Dark mode colors. */
+:root {
+	--sl-color-accent: #EE827C;
+  --sl-color-text-accent: #EE827C;
+}
+/* Light mode colors. */
+:root[data-theme='light'] {
+	--sl-color-accent: #EE827C;
+  --sl-color-text-accent: #EE827C;
+}
