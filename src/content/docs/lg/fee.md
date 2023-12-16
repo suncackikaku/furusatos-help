@@ -1,11 +1,15 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: ふるさとズ利用料
+description: ふるさとズ運営者から毎月お送りする利用料の案内を一覧でご確認いただけます。
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.
+ふるさとズ運営者から毎月お送りする利用料の案内を一覧でご確認いただけます。
 
-## Further reading
+## 利用料の確認
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+![](../../../assets/images/lg_fee_01.png)
+*利用料一覧*
+
+毎月お送りする利用料のご案内を管理画面でご確認いただけます。  
+管理画面の **「ふるさとズ利用料」** から進むと一覧画面が確認できます。   
+請求書ファイルのダウンロードも可能です。

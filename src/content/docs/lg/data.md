@@ -1,11 +1,15 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: データ資料送付
+description: ふるさとズ運営者からお送りしたご案内資料を一覧でご確認いただけます。
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.
+ふるさとズ運営者からお送りしたご案内資料を一覧でご確認いただけます。
 
-## Further reading
+## 資料の確認
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+![](../../../assets/images/lg_data_01.png)
+*データ資料一覧*
+
+運営側からお送りした資料のを管理画面でご確認いただけます。  
+管理画面の **「データ資料送付」** から進むと一覧画面が確認できます。   
+添付ファイルのダウンロードは青いボタンをクリックしてください。

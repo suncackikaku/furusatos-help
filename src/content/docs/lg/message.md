@@ -1,11 +1,54 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: 応援メッセージ
+description: ふるさとズでは、寄附者から応援メッセージを受け取ることができます。
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.
+ふるさとズでは、寄附者から応援メッセージを受け取ることができます。
 
-## Further reading
+## 応援メッセージの表示設定
+寄附者が投稿した応援メッセージの表示設定を行うことができます。  
+早速確認してみましょう。
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+![ダッシュボード画面](../../../assets/images/lg_message_01.png)
+*ダッシュボード画面*
+
+管理画面の左側 **「応援メッセージ」** から進みます。
+
+![](../../../assets/images/lg_message_02.png)
+
+1. 寄附者がメッセージ投稿する際に選択した、「メッセージを届けたい相手」が表示されています。
+
+2. 寄附者が「応援メッセージをサイト公開しない」を選択したものは、管理画面でのみ内容の確認ができます。
+
+3. 公開・非公開は管理画面で選択ができますが、 **既定値は非表示** で設定されています。
+
+## 寄附者側の応援メッセージ投稿画面
+
+![ふるさとズ 寄附者画面](../../../assets/images/lg_message_03.png)
+*ふるさとズ 寄附者画面*
+
+寄附者が寄附完了後、返礼品の受け渡しが完了すると任意で応援メッセージを送ることができる画面が表示されます。  
+その際、「メッセージの宛先」と「サイト公開可否」の選択ができるようになっています。
+
+![ふるさとズ　寄附者マイページ](../../../assets/images/lg_message_04.png)
+*ふるさとズ　寄附者マイページ*
+
+受渡し済の返礼品は、マイページからいつでもメッセージを送信することができ、送った内容は各注文履歴から確認ができます。
+
+## 応援メッセージの表示場所
+
+### 「自治体に向けてのメッセージ」が選択された場合
+
+![ふるさとズ 自治体ページ](../../../assets/images/lg_message_05.png)
+*ふるさとズ 自治体ページ*
+
+この場合、自治体ページに応援メッセージが表示されます。  
+店舗ページや返礼品の商品ページには表示されません。
+
+### 「店舗に向けてのメッセージ」が選択された場合
+
+この場合、店舗ページおよび寄附をした返礼品のページに応援メッセージが表示されます。  
+自治体ページには表示されません。
+
+![左：ふるさとズ寄 附返礼品ページ　右：ふるさとズ 事業者ページ](../../../assets/images/lg_message_06.png)
+*左：ふるさとズ寄 附返礼品ページ　右：ふるさとズ 事業者ページ*

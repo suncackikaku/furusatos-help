@@ -23,14 +23,18 @@ export default defineConfig({
 				},
 			},
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				facebook: 'https://www.facebook.com/furusatos',
+				instagram: 'https://www.instagram.com/furusatoscom/',
+				'x.com': 'https://twitter.com/furusatoscom',
+				youtube: 'https://www.youtube.com/@furusatos',
 			},
 			sidebar: [
+				{ label: 'ふるさとズヘルプサイトTOP', link: '/' },
 				{
 					label: '自治体関係者向け',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'トップページ', link: '/lg/' },
+						{ label: '自治体関係者向けTOP', link: '/lg/' },
 						{ label: '登録店舗', link: '/lg/shop/' },
 						{ label: 'お知らせ管理', link: '/lg/news/' },
 						{ label: '注文管理', link: '/lg/order/' },
@@ -46,6 +50,13 @@ export default defineConfig({
 						{ label: 'ふるさとズ利用料', link: '/lg/fee/' },
 						{ label: 'データ資料送付', link: '/lg/data/' },
 						{ label: '設定', link: '/lg/setting/' },
+						{ label: 'その他', items: [
+							{ label: 'ふるさと納税do連携マニュアル', link: '/lg/furusatodo/' },
+							{ label: '銀行振込対応', link: '/lg/banktransfer/' },
+							{ label: 'ゲスト（会員登録なし）寄附', link: '/lg/guest/' },
+							{ label: '届けるX（Twitter）キャンペーン', link: '/lg/todokeru/' },
+						]
+					 },
 					],
 				},				{
 					label: 'Guides',
