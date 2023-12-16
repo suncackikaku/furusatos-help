@@ -3,6 +3,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://suncackikaku.github.io',
+  // base: '/my-repo',
 	integrations: [
 		starlight({
 			title: '店舗型ふるさと納税 ふるさとズ ヘルプサイト',
