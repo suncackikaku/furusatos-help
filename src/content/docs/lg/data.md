@@ -7,7 +7,7 @@ description: ふるさとズ運営者からお送りしたご案内資料を一�
 
 ## 資料の確認
 
-![](/src/assets/images/lg_data_01.png)
+![](../../../assets/images/lg_data_01.png)
 *データ資料一覧*
 
 運営側からお送りした資料のを管理画面でご確認いただけます。  

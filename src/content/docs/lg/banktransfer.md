@@ -9,12 +9,12 @@ description: 銀行振込決済の対応方法の流れを説明いたします�
 
 ## 0. お客様にて銀行振込決済
 
-![注文画面](/src/assets/images/lg_banktransfer_01.png)
+![注文画面](../../../assets/images/lg_banktransfer_01.png)
 *注文画面*
 
 銀行振込が可能な店舗での寄附では、お支払い方法に「銀行振込」が表示されます。 
 
-![注文完了画面](/src/assets/images/lg_banktransfer_02.png)
+![注文完了画面](../../../assets/images/lg_banktransfer_02.png)
 *注文完了画面*
 
 銀行振込を選択して、注文を行うと注文完了画面に振込口座情報が表示されます。  
@@ -26,7 +26,7 @@ description: 銀行振込決済の対応方法の流れを説明いたします�
 
 お客様が銀行振込を完了すると、自治体様および事業者様に下記注文完了通知が届きます。
 
-![](/src/assets/images/lg_banktransfer_03.png)
+![](../../../assets/images/lg_banktransfer_03.png)
 
 ### 1-2.【自治体様】支払い処理ステータスの更新
 
@@ -36,10 +36,10 @@ description: 銀行振込決済の対応方法の流れを説明いたします�
 「支払いを完了にする」ボタンが消えれば、ステータス更新完了です。  
 事業者へ入金確認完了メールが送信されます。
 
-![支払い完了前](/src/assets/images/lg_banktransfer_04.png)
+![支払い完了前](../../../assets/images/lg_banktransfer_04.png)
 *支払い完了前*
 
-![支払い完了後](/src/assets/images/lg_banktransfer_05.png)
+![支払い完了後](../../../assets/images/lg_banktransfer_05.png)
 *支払い完了後*
 
 ### 1-3.【事業者様】入金確認完了メールの確認
@@ -47,24 +47,24 @@ description: 銀行振込決済の対応方法の流れを説明いたします�
 自治体様にて支払い処理ステータスを更新すると、下記のメールが送信されます。  
 ※支払い状況は管理画面で確認が可能です。
 
-![](/src/assets/images/lg_banktransfer_06.png)
+![](../../../assets/images/lg_banktransfer_06.png)
 
 ### 1-4.【事業者様】商品の引き渡し（または発送）
 
 支払完了後は、事業者様からお客様に商品を引き渡します。  
 引き渡し完了後は、注文詳細画面のメモで「発送しました」「渡しました」を残します。
 
-![](/src/assets/images/lg_banktransfer_07.png)
+![](../../../assets/images/lg_banktransfer_07.png)
 
 ### 1-5.【自治体様】商品引渡処理ステータスの確認
 
 自治体様は注文詳細画面のメモを確認できたら「受け取り済みにする」ボタンをクリックして、ステータスを更新します。  
 （入金確認済みでお渡しできてない商品がないかを定期的にご確認ください）
 
-![商品引き渡し前](/src/assets/images/lg_banktransfer_08.png)
+![商品引き渡し前](../../../assets/images/lg_banktransfer_08.png)
 *商品引き渡し前*
 
-![商品引き渡し後](/src/assets/images/lg_banktransfer_09.png)
+![商品引き渡し後](../../../assets/images/lg_banktransfer_09.png)
 *商品引き渡し後*
 
 商品引渡処理の箇所に「未受け取りにする」のボタンが表示されれば、銀行振込対応完了です。
