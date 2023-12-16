@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://suncackikaku.github.io',
-  // base: '/my-repo',
+  base: '/furusatos-help',
 	integrations: [
 		starlight({
 			title: '店舗型ふるさと納税 ふるさとズ ヘルプサイト',
@@ -12,11 +12,11 @@ export default defineConfig({
 			logo: {
 				alt: 'ふるさとズ',
 				replacesTitle: true,
-				light: './src/assets/images/furusatos_header_logo.svg',
-				dark: './src/assets/images/furusatos_header_logo.svg',
+				light: '/src/assets/images/furusatos_header_logo.svg',
+				dark: '/src/assets/images/furusatos_header_logo.svg',
 			},
 			customCss: [
-				'./src/assets/styles/custom.css',
+				'/src/assets/styles/custom.css',
 			],
 			locales: {
 				root: {
@@ -60,16 +60,18 @@ export default defineConfig({
 						]
 					 },
 					],
-				},				{
-					label: 'Guides',
+				},
+				{
+					label: '店舗関係者向け',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
+						{ label: '店舗関係者向けTOP', link: 'https://ss.furusatos.com/' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: '店舗スタッフ向け',
+					items: [
+						{ label: '店舗スタッフ向けTOP', link: 'https://ss.furusatos.com/%E5%BA%97%E8%88%97%E3%82%B9%E3%82%BF%E3%83%83%E3%83%95%E7%94%A8%E7%94%BB%E9%9D%A2%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9' },
+					],
 				},
 			],
 		}),
