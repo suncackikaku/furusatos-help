@@ -8,12 +8,12 @@ description: 寄附を受け付ける際の寄附金の使い道を登録、編�
 
 ## 使い道の登録
 
-![寄附金の使い道管理画面](../../../assets/images/lg_donation_01.png)
+![寄附金の使い道管理画面](/src/assets/images/lg_donation_01.png)
 *寄附金の使い道管理画面*
 
 寄附金の使い道を登録するには、管理画面の **「寄附金の使い道を登録する」** ボタンをクリックします。
 
-![登録画面](../../../assets/images/lg_donation_02.png)
+![登録画面](/src/assets/images/lg_donation_02.png)
 *登録画面*
 
 登録画面が表示されたら、登録したい寄附金の使い道を入力し **「登録する」** ボタンをクリックしましょう。
@@ -23,19 +23,19 @@ description: 寄附を受け付ける際の寄附金の使い道を登録、編�
 
 ## 使い道の編集
 
-![寄附金の使い道管理画面](../../../assets/images/lg_donation_03.png)
+![寄附金の使い道管理画面](/src/assets/images/lg_donation_03.png)
 *寄附金の使い道管理画面*
 
 寄附金の使い道を編集するには、管理画面から編集したい使い道の **「編集」** ボタンをクリックします。
 
-![編集画面](../../../assets/images/lg_donation_04.png)
+![編集画面](/src/assets/images/lg_donation_04.png)
 *編集画面*
 
 編集画面が表示されたら、内容を編集し **「登録する」** ボタンをクリックして内容を確定させましょう。
 
 ## 使い道の削除
 
-![寄附金の使い道管理画面](../../../assets/images/lg_donation_05.png)
+![寄附金の使い道管理画面](/src/assets/images/lg_donation_05.png)
 *寄附金の使い道管理画面*
 
 寄附金の使い道を削除するには、削除したい使い道の **「削除」** ボタンをクリックします。  
@@ -46,10 +46,10 @@ description: 寄附を受け付ける際の寄附金の使い道を登録、編�
 寄附の使い道が明確であるほど、寄附者にとっては自分の意思の反映がわかりやすくなります。  
 ぜひ活用しましょう。
 
-![返礼品管理の編集画面](../../../assets/images/lg_donation_06.png)
+![返礼品管理の編集画面](/src/assets/images/lg_donation_06.png)
 *返礼品管理の編集画面*
 
-![返礼品編集画面の最下部](../../../assets/images/lg_donation_07.png)
+![返礼品編集画面の最下部](/src/assets/images/lg_donation_07.png)
 *返礼品編集画面の最下部*
 
 設定するには、返礼品管理の編集画面へ進みましょう。  

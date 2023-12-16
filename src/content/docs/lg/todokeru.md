@@ -8,13 +8,13 @@ SNSの拡散性 × プレゼント企画 でマチの情報を全国の人に届
 
 ## 「ふるさといいものプレゼントキャンペーン」の概要はこちら
 
-[SNSキャンペーンチラシ](../../../assets/pdf/furusatozu_twitter_cp_chirashi_fin.pdf)
+[SNSキャンペーンチラシ](/src/assets/pdf/furusatozu_twitter_cp_chirashi_fin.pdf)
 
-![](../../../assets/images/lg_todokeru_01.jpg)
-![](../../../assets/images/lg_todokeru_02.jpg)
+![](/src/assets/images/lg_todokeru_01.jpg)
+![](/src/assets/images/lg_todokeru_02.jpg)
 
 ### キャンペーン参考
-[第8弾 ふるさといいものプレゼントキャンペーン](https://campaign.furusatos.com/chikusei3/){:target="_blank"}
+[第8弾 ふるさといいものプレゼントキャンペーン](https://campaign.furusatos.com/chikusei3/)
 
 ### エントリー空き枠
 - 12/26〜1/12	ふるさといいものプレゼントキャンペーン　vol.14
