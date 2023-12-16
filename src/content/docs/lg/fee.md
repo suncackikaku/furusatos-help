@@ -7,7 +7,7 @@ description: ふるさとズ運営者から毎月お送りする利用料の案�
 
 ## 利用料の確認
 
-![](../../../assets/images/lg_fee_01.png)
+![](/src/assets/images/lg_fee_01.png)
 *利用料一覧*
 
 毎月お送りする利用料のご案内を管理画面でご確認いただけます。  

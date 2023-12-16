@@ -8,31 +8,31 @@ description: サイトに掲載するよくある質問の登録、編集、削�
 
 ## よくある質問の登録
 
-![よくある質問一覧の表示](../../../assets/images/lg_faq_01.png)
+![よくある質問一覧の表示](/src/assets/images/lg_faq_01.png)
 *よくある質問一覧の表示*
 
 右側にある **「よくある質問を登録する」** ボタンをクリックします。
 
-![入力画面](../../../assets/images/lg_faq_02.png)
+![入力画面](/src/assets/images/lg_faq_02.png)
 *入力画面*
 
 よくある質問がタイトルとして表示されます。質問の回答を入力し、 **「登録」** ボタンをクリックすると登録が完了します。
 
 ## よくある質問の編集
 
-![編集項目](../../../assets/images/lg_faq_03.png)
+![編集項目](/src/assets/images/lg_faq_03.png)
 *編集項目*
 
 編集したい質問の **「編集」** をクリックします。
 
-![編集画面](../../../assets/images/lg_faq_04.png)
+![編集画面](/src/assets/images/lg_faq_04.png)
 *編集画面*
 
 該当箇所を編集し、 **「登録する」** をクリックすると編集が完了します。
 
 ## よくある質問の削除
 
-![編集項目](../../../assets/images/lg_faq_05.png)
+![編集項目](/src/assets/images/lg_faq_05.png)
 *編集項目*
 
 削除したい質問の **「削除」** をクリックします。
