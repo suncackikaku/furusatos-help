@@ -12,6 +12,7 @@
 h1#_top {
   font-size: 3.2rem;
 }
+
 .section-wrap {
   padding-top: 6rem;
 }
@@ -24,4 +25,14 @@ h1#_top {
   .col3-wrap {
     column-count: 3;
   } 
+}
+
+span.label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  padding: 0 0.2rem;
+  border-radius: 4px;
+  border: 2px solid #EE827C;
 }
