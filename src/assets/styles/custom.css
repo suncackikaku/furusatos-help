@@ -8,3 +8,20 @@
 	--sl-color-accent: #EE827C;
   --sl-color-text-accent: #EE827C;
 }
+
+h1#_top {
+  font-size: 3.2rem;
+}
+.section-wrap {
+  padding-top: 6rem;
+}
+
+/* 3column layout */
+.col3-wrap {
+  column-count: 1;
+}
+@media (min-width: 50rem) {
+  .col3-wrap {
+    column-count: 3;
+  } 
+}
