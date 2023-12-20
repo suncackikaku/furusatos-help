@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://suncackikaku.github.io',
-  base: '/furusatos-help',
+  base: '/furusatos-help/',
 	integrations: [
 		starlight({
 			title: '店舗型ふるさと納税 ふるさとズ ヘルプサイト',
@@ -32,6 +32,7 @@ export default defineConfig({
 			},
 			sidebar: [
 				{ label: 'ふるさとズヘルプサイトTOP', link: '/' },
+				{ label: 'よくある質問', link: './faq/' },
 				{
 					label: '自治体関係者向け',
 					items: [
@@ -62,9 +63,18 @@ export default defineConfig({
 					],
 				},
 				{
-					label: '店舗関係者向け',
+					label: '店舗管理者向け',
 					items: [
-						{ label: '店舗関係者向けTOP', link: 'https://ss.furusatos.com/' },
+						{ label: '店舗管理者向けTOP', link: './shops/' },
+						{ label: '注文管理', link: './shops/order/' },
+						{ label: 'バーコード読取', link: './shops/barcode/' },
+						{ label: '返礼品管理', link: './shops/product/' },
+						{ label: '応援メッセージ', link: './shops/message/' },
+						{ label: 'チケット利用状況', link: './shops/ticket/' },
+						{ label: 'プロモーションツール', link: './shops/tool/' },
+						{ label: '請求管理', link: './shops/claim/' },
+						{ label: 'スタッフ管理', link: './shops/staff/' },
+						{ label: '個人設定', link: './shops/setting/' },
 					],
 				},
 				{
@@ -74,6 +84,8 @@ export default defineConfig({
 					],
 				},
 			],
+			lastUpdated: true,
+			pagination: false,
 		}),
 	],
 });
