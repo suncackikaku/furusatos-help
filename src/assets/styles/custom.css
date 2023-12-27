@@ -13,6 +13,21 @@ h1#_top {
   font-size: 3.2rem;
 }
 
+#top-index h2 {
+  padding: 0.5em 0.3em;
+  margin-bottom: 0.3em;
+  position: relative;
+}
+#top-index h2::before {
+  content: '';
+  background-color: #EE827C;
+  width: 2em;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .section-wrap {
   padding-top: 6rem;
 }
