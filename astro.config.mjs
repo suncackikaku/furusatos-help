@@ -15,6 +15,9 @@ export default defineConfig({
 				light: '/src/assets/images/furusatos_header_logo.svg',
 				dark: '/src/assets/images/furusatos_header_logo.svg',
 			},
+			components: {
+				// Footer: './src/components/ConditionalFooter.astro',
+			},
 			customCss: [
 				'./src/assets/styles/custom.css',
 			],
