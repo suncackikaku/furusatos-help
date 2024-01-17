@@ -3,8 +3,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://suncackikaku.github.io',
-  base: '/furusatos-help/',
+	site: 'https://help.furusatos.com',
+  base: '/',
 	integrations: [
 		starlight({
 			title: '店舗型ふるさと納税 ふるさとズ ヘルプサイト',
