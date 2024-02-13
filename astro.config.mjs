@@ -56,6 +56,7 @@ export default defineConfig({
 							items: [
 								{ label: 'ふるさと納税do連携マニュアル', link: '/lg/furusatodo/' },
 								{ label: '銀行振込対応', link: '/lg/banktransfer/' },
+								{ label: 'コンビニ決済対応', link: '/lg/conveniencepayment/' },
 								{ label: 'ゲスト（会員登録なし）寄附', link: '/lg/guest/' },
 								{ label: '届けるX（Twitter）キャンペーン', link: '/lg/todokeru/' },
 							]
