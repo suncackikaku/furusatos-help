@@ -1,9 +1,10 @@
 ---
 title: お役立ちツールのダウンロード
-tableOfContents: false
+tableOfContents: true
 ---
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Icon } from '@astrojs/starlight/components';
 
 いつも店舗型ふるさと納税®『ふるさとズ』をご利用いただき、誠にありがとうございます。  
 ふるさとズのロゴや販促ツール等を一覧にしております。  
@@ -12,9 +13,9 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 
 <Tabs>
   <TabItem label="印刷して使う">
-  <div class="btn_anchor" >[使用例 &#9660;](#使用例) [寄附者向け販促ツール &#9660;](#寄附者向け販促ツール) [ロゴ &#9660;](#ロゴ)</div>
+  <div class="btn_anchor" >[使用例<span class="btn_anchor_icon" ><Icon name="down-caret" size="1.3rem" /></span>](#印刷時の使用例) [寄附者向け販促ツール<span class="btn_anchor_icon" ><Icon name="down-caret" size="1.3rem" /></span>](#寄附者向け販促ツール) [ロゴ<span class="btn_anchor_icon" ><Icon name="down-caret" size="1.3rem" /></span>](#ロゴ)</div>
   
-		## 使用例
+		## 印刷時の使用例
 		**店内で掲示するチラシやポスターとして**
 		<div class="col2-wrap">
 			<div class="col">
@@ -49,87 +50,93 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 					</a>
 				</div>
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
+					<a href="../../../assets/pdf/furusato_seidosetsumei_ver01.pdf" download="furusato_seidosetsumei_ver01.pdf">
+						![](../../../assets/images/pt_print_flyer_seidosetsumei.webp)
+						<span class="name">ふるさと納税制度説明チラシ</span>  
 						<span class="label">サイズ</span>A4  
 						<span class="label">形式</span>PDF
 					</a>
 				</div>
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
+					<a href="../../../assets/pdf/furusatos_guidance_ver01.pdf" download="furusatos_guidance_ver01.pdf">
+						![](../../../assets/images/pt_print_flyer_guidance.webp)
+						<span class="name">ふるさとズ登録ガイダンス</span>  
 						<span class="label">サイズ</span>A4  
 						<span class="label">形式</span>PDF
 					</a>
 				</div>
 				<div class="col">
+					<a href="../../../assets/ppt/A4_tenpo_PowerPoint_template_ver2.pptx" download="A4_tenpo_PowerPoint_template_ver2.pptx">
+						![](../../../assets/images/pt_print_flyer_template.webp)
+						<span class="name">店舗用チラシテンプレート</span>  
+						<span class="label">サイズ</span>A4  
+						<span class="label">形式</span>PowerPoint
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/ppt/A4_tenpo_PowerPoint_template_kingakuziyu_ver1.pptx" download="A4_tenpo_PowerPoint_template_kingakuziyu_ver1.pptx">
+						![](../../../assets/images/pt_print_flyer_template_free.webp)
+						<span class="name">【金額自由入力】店舗用チラシテンプレート</span>  
+						<span class="label">サイズ</span>A4  
+						<span class="label">形式</span>PowerPoint
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/ppt/A4_tenpo_PowerPoint_template_denshi_ver1.pptx" download="A4_tenpo_PowerPoint_template_denshi_ver1.pptx">
+						![](../../../assets/images/pt_print_flyer_template_eticket.webp)
+						<span class="name">【電子チケット】店舗用チラシテンプレート</span>  
+						<span class="label">サイズ</span>A4  
+						<span class="label">形式</span>PowerPoint
+					</a>
+				</div>
+				
+				{/* <div class="col">
 					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
 						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
+						<span class="name">キャンペーンチラシ</span>  
 						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>MP4
+						<span class="label">形式</span>PDF  
+						<span class="label">期間</span>11/20〜12/20  
+						<span class="label">対象</span>寄附者さま
 					</a>
 				</div>
 				<div class="col">
 					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
 						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>MP4
+						<span class="name">キャンペーンチラシ</span>  
+						<span class="label">サイズ</span>A3  
+						<span class="label">形式</span>PDF  
+						<span class="label">期間</span>11/20〜12/20  
+						<span class="label">対象</span>寄附者さま
 					</a>
-				</div>
-				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>MP4
-					</a>
-				</div>
-				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>MP4
-					</a>
-				</div>
-				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>MP4
-					</a>
-				</div>
+				</div> */}
+
 			</div>
 
 			### その他ツール（ポストカード etc...）
 			<div class="col3-wrap">
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>PDF
+					<a href="../../../assets/ppt/ポストカード_スタンダードver_20221128.pptx" download="ポストカード_スタンダードver_20221128.pptx">
+						![](../../../assets/images/pt_print_postcard-std.webp)
+						<span class="name">ポストカード（スタンダード）</span>  
+						<span class="label">サイズ</span>100mm×148mm  
+						<span class="label">形式</span>PowerPoint(.pptx)
 					</a>
 				</div>
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>PDF
+					<a href="../../../assets/ppt/ポストカード_マップピンver_20221128.pptx" download="ポストカード_マップピンver_20221128.pptx">
+						![](../../../assets/images/pt_print_postcard-map.webp)
+						<span class="name">ポストカード（マップピン）</span>  
+						<span class="label">サイズ</span>100mm×148mm  
+						<span class="label">形式</span>PowerPoint(.pptx)
 					</a>
 				</div>
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>PDF
+					<a href="../../../assets/ppt/ミニ三角POP_20221128.pptx" download="ミニ三角POP_20221128.pptx">
+						![](../../../assets/images/pt_print_pop-mini.webp)
+						<span class="name">三角POP（ミニ）</span>  
+						<span class="label">サイズ</span>89mm×85mm  
+						<span class="label">形式</span>PowerPoint(.pptx)
 					</a>
 				</div>
 			</div>
@@ -138,9 +145,9 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 			### ガイドライン
 			<div class="col3-wrap">
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
+					<a href="../../../assets/pdf/furusatos_logoguideline_ver01.pdf" download="furusatos_logoguideline_ver01.pdf">
+						![](../../../assets/images/pt_logo_guideline_thum.webp)
+						<span class="name">ふるさとズロゴガイドライン</span>  
 						<span class="label">サイズ</span>A4  
 						<span class="label">形式</span>PDF
 					</a>
@@ -150,41 +157,232 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 			### ロゴマーク（印刷用／CMYK）
 			<div class="col3-wrap">
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>PDF
+					<a href="../../../assets/logo/print_logo_x01.jpg" download="print_logo_x01.jpg">
+						![](../../../assets/images/pt_logo_x01_thum.webp)
+						<span class="name">ロゴ横組み1</span>  
+						<span class="label">形式</span>JPG
 					</a>
 				</div>
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>PDF
+					<a href="../../../assets/logo/print_logo_x02.jpg" download="print_logo_x02.jpg">
+						![](../../../assets/images/pt_logo_x02_thum.webp)
+						<span class="name">ロゴ横組み2</span>  
+						<span class="label">形式</span>JPG
 					</a>
 				</div>
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
-						<span class="label">サイズ</span>A4  
-						<span class="label">形式</span>PDF
+					<a href="../../../assets/logo/print_logo_y01.jpg" download="print_logo_y01.jpg">
+						![](../../../assets/images/pt_logo_y01_thum.webp)
+						<span class="name">ロゴ縦組み1</span>  
+						<span class="label">形式</span>JPG
 					</a>
 				</div>
 				<div class="col">
-					<a href="../../../assets/pdf/202312onestop.pdf" download="202312onestop.pdf">
-						![](../../../assets/images/pt_print_202312onestop.png)
-						<span class="name">ワンストップ特例制度、確定申告説明資料</span>  
+					<a href="../../../assets/logo/print_logo_y02.jpg" download="print_logo_y02.jpg">
+						![](../../../assets/images/pt_logo_y02_thum.webp)
+						<span class="name">ロゴ縦組み2</span>  
+						<span class="label">形式</span>JPG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/print_logo_symbol.jpg" download="print_logo_symbol.jpg">
+						![](../../../assets/images/pt_logo_symbol_thum.webp)
+						<span class="name">ロゴシンボルマーク</span>  
+						<span class="label">形式</span>JPG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/print_white_logo_x01.jpg" download="print_white_logo_x01.jpg">
+						![](../../../assets/images/pt_white_logo_x01_thum.webp)
+						<span class="name">ロゴ横組み1（白）</span>  
+						<span class="label">形式</span>JPG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/print_white_logo_x02.jpg" download="print_white_logo_x02.jpg">
+						![](../../../assets/images/pt_white_logo_x02_thum.webp)
+						<span class="name">ロゴ横組み2（白）</span>  
+						<span class="label">形式</span>JPG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/print_white_logo_y01.jpg" download="print_white_logo_y01.jpg">
+						![](../../../assets/images/pt_white_logo_y01_thum.webp)
+						<span class="name">ロゴ縦組み1（白）</span>  
+						<span class="label">形式</span>JPG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/print_white_logo_y02.jpg" download="print_white_logo_y02.jpg">
+						![](../../../assets/images/pt_white_logo_y02_thum.webp)
+						<span class="name">ロゴ縦組み2（白）</span>  
+						<span class="label">形式</span>JPG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/print_white_logo_symbol.jpg" download="print_white_logo_symbol.jpg">
+						![](../../../assets/images/pt_white_logo_symbol_thum.webp)
+						<span class="name">ロゴシンボルマーク（白）</span>  
+						<span class="label">形式</span>JPG
+					</a>
+				</div>
+			</div>
+  </TabItem>
+  <TabItem label="Webで使う">
+  	<div class="btn_anchor" >[使用例<span class="btn_anchor_icon" ><Icon name="down-caret" size="1.3rem" /></span>](#Web上での使用例) [寄附者向け販促ツール<span class="btn_anchor_icon" ><Icon name="down-caret" size="1.3rem" /></span>](#Web用販促ツール) [ロゴ<span class="btn_anchor_icon" ><Icon name="down-caret" size="1.3rem" /></span>](#ロゴ)</div>
+
+		## Web上での使用例
+		**SNSでの情報発信として**
+		<div class="col2-wrap">
+			<div class="col">
+				![SNSで情報発信する際はハッシュタグとして、#ふるさとズ#店舗型ふるさと納税#ふるさと納税 などを活用ください。](../../../assets/images/pt_web_example_01.webp)
+			</div>
+			<div class="col">
+				店舗でお持ちのSNSアカウント（Twitter、Instagram、Facebook等）がございましたら、ふるさとズを導入した旨を投稿することをオススメしております。  
+				投稿にお使いいただける画像をご用意しておりますので、積極的に活用ください。
+			</div>
+		</div>
+
+		**Webサイトでの情報発信として**
+		<div class="col2-wrap">
+			<div class="col">
+				![](../../../assets/images/pt_web_example_02.webp)
+			</div>
+			<div class="col">
+				店舗のWebサイトをお持ちの場合は、Webサイト上に設置できるように画像を用意しております。  
+				ふるさとズの店舗ページへとご案内し、寄附の促進にお役立てください。
+			</div>
+		</div>
+
+		## Web用販促ツール
+		### 動画
+			<div class="col3-wrap">
+				<div class="col">
+					<a href="../../../assets/movie/22_寄附者さま向け紹介動画.mp4" download="22_寄附者さま向け紹介動画.mp4">
+						![](../../../assets/images/pt_web_bnr01_320_140.webp)
+						<span class="name">ふるさとズ 寄附者様向け紹介動画</span>  
+						<span class="label">形式</span>MP4
+					</a>
+				</div>
+			</div>
+
+		### バナー
+			<div class="col3-wrap">
+				<div class="col">
+					<a href="../../../assets/bnr/web_bnr01_320_140.png" download="web_bnr01_320_140.png">
+						![](../../../assets/images/pt_web_bnr01_320_140.webp)
+						<span class="name">ふるさとズバナー</span>  
+						<span class="label">サイズ</span>320×140  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/bnr/web_illust_bnr01_980_395.png" download="web_illust_bnr01_980_395.png">
+						![](../../../assets/images/pt_web_illust_bnr01_980_395.webp)
+						<span class="name">ふるさとズイラストバナー</span>  
+						<span class="label">サイズ</span>980×395  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+			</div>
+
+		### SNS用画像
+			<div class="col3-wrap">
+				<div class="col">
+					<a href="../../../assets/bnr/web_sns_bnr01_1200_900.png" download="web_sns_bnr01_1200_900.png">
+						![](../../../assets/images/pt_web_bnr01_320_140.webp)
+						<span class="name">ふるさとズSNS用バナー</span>  
+						<span class="label">サイズ</span>1200×600  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+			</div>
+
+			## ロゴ
+			### ガイドライン
+			<div class="col3-wrap">
+				<div class="col">
+					<a href="../../../assets/pdf/furusatos_logoguideline_ver01.pdf" download="furusatos_logoguideline_ver01.pdf">
+						![](../../../assets/images/pt_logo_guideline_thum.webp)
+						<span class="name">ふるさとズロゴガイドライン</span>  
 						<span class="label">サイズ</span>A4  
 						<span class="label">形式</span>PDF
 					</a>
 				</div>
 			</div>
 
-  </TabItem>
-  <TabItem label="Webで使う">
-  	<div class="btn_anchor" >[使用例 &#9660;](#使用例) [寄附者向け販促ツール &#9660;](#寄附者向け販促ツール) [ロゴ &#9660;](#ロゴ)</div>
+			### ロゴマーク（Web用／RGB）
+			<div class="col3-wrap">
+				<div class="col">
+					<a href="../../../assets/logo/web_logo_x01.png" download="web_logo_x01.png">
+						![](../../../assets/images/pt_logo_x01_thum.webp)
+						<span class="name">ロゴ横組み1</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/web_logo_x02.png" download="web_logo_x02.png">
+						![](../../../assets/images/pt_logo_x02_thum.webp)
+						<span class="name">ロゴ横組み2</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/web_logo_y01.png" download="web_logo_y01.png">
+						![](../../../assets/images/pt_logo_y01_thum.webp)
+						<span class="name">ロゴ縦組み1</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/web_logo_y02.png" download="web_logo_y02.png">
+						![](../../../assets/images/pt_logo_y02_thum.webp)
+						<span class="name">ロゴ縦組み2</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/web_logo_symbol.png" download="web_logo_symbol.png">
+						![](../../../assets/images/pt_logo_symbol_thum.webp)
+						<span class="name">ロゴシンボルマーク</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/web_white_logo_x01.png" download="web_white_logo_x01.png">
+						![](../../../assets/images/pt_white_logo_x01_thum.webp)
+						<span class="name">ロゴ横組み1（白）</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/web_white_logo_x02.png" download="web_white_logo_x02.png">
+						![](../../../assets/images/pt_white_logo_x02_thum.webp)
+						<span class="name">ロゴ横組み2（白）</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/web_white_logo_y01.png" download="web_white_logo_y01.png">
+						![](../../../assets/images/pt_white_logo_y01_thum.webp)
+						<span class="name">ロゴ縦組み1（白）</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/web_white_logo_y02.png" download="web_white_logo_y02.png">
+						![](../../../assets/images/pt_white_logo_y02_thum.webp)
+						<span class="name">ロゴ縦組み2（白）</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+				<div class="col">
+					<a href="../../../assets/logo/web_white_logo_symbol.png" download="web_white_logo_symbol.png">
+						![](../../../assets/images/pt_white_logo_symbol_thum.webp)
+						<span class="name">ロゴシンボルマーク（白）</span>  
+						<span class="label">形式</span>PNG
+					</a>
+				</div>
+			</div>
   </TabItem>
 </Tabs>
