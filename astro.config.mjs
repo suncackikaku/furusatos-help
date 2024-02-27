@@ -84,7 +84,7 @@ export default defineConfig({
 						{ label: '店舗スタッフ向けTOP', link: '/staff/staff/' },
 					],
 				},
-				{ label: 'お役立ちツール', link: 'https://promotion-tool.furusatos.com/' },
+				{ label: 'お役立ちツール', link: '/promotion-tools/' },
 			],
 			lastUpdated: true,
 			pagination: false,
