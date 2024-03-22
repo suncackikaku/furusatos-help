@@ -76,6 +76,8 @@ export default defineConfig({
 						{ label: '請求管理', link: '/shops/claim/' },
 						{ label: 'スタッフ管理', link: '/shops/staff/' },
 						{ label: '個人設定', link: '/shops/setting/' },
+						{ label: 'LINEでのログイン', link: '/shops/linelogin/' },
+
 					],
 				},
 				{
