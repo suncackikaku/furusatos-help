@@ -2,17 +2,24 @@
 :root {
 	--sl-color-accent: #EE827C;
   --sl-color-text-accent: #EE827C;
+  --sl-color-accent-low: #f7dedc;
 }
 /* Light mode colors. */
 :root[data-theme='light'] {
 	--sl-color-accent: #EE827C;
   --sl-color-text-accent: #EE827C;
+  --sl-color-accent-low: #f7dedc;
 }
 
 html {
 	scroll-behavior: smooth;
 }
 
+.starlight-aside--note {
+  border-color: var(--sl-color-accent);
+  --sl-color-asides-text-accent: var(--sl-color-text);
+  background-color: var(--sl-color-accent-low);
+}
 .hero h1#_top {
   font-size: 3.2rem;
 }
