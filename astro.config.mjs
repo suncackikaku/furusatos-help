@@ -41,7 +41,12 @@ export default defineConfig({
 						{ label: 'お知らせ管理', link: '/lg/news/' },
 						{ label: '注文管理', link: '/lg/order/' },
 						{ label: '請求管理', link: '/lg/claim/' },
-						{ label: '返礼品管理', link: '/lg/product/' },
+						{ label: '返礼品管理', 
+							items: [
+								{ label: '返礼品の登録・編集・削除', link: '/lg/product/' },
+								{ label: 'オンラインクーポンの設定', link: '/lg/online-coupon/' },
+							]
+						},
 						{ label: 'チケット利用状況', link: '/lg/ticket/' },
 						{ label: 'クラウドファンディング', link: '/lg/crowdfunding/' },
 						{ label: '寄附金の使い道管理', link: '/lg/donation/' },
