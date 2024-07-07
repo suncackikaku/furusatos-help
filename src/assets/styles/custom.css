@@ -1,14 +1,24 @@
 /* Dark mode colors. */
 :root {
+  --sl-font: 'IBM Plex Sans JP', sans-serif;
 	--sl-color-accent: #EE827C;
   --sl-color-text-accent: #EE827C;
   --sl-color-accent-low: #f7dedc;
+  --sl-text-h1: var(--sl-text-4xl);
+  --sl-text-h2: var(--sl-text-3xl);
+  --sl-text-h3: var(--sl-text-2xl);
+  --sl-text-h4: var(--sl-text-xl);
 }
 /* Light mode colors. */
 :root[data-theme='light'] {
 	--sl-color-accent: #EE827C;
   --sl-color-text-accent: #EE827C;
   --sl-color-accent-low: #f7dedc;
+  --sl-text-h1: var(--sl-text-4xl);
+  --sl-text-h2: var(--sl-text-3xl);
+  --sl-text-h3: var(--sl-text-2xl);
+  --sl-text-h4: var(--sl-text-xl);
+
 }
 
 html {
@@ -20,6 +30,10 @@ html {
   --sl-color-asides-text-accent: var(--sl-color-text);
   background-color: var(--sl-color-accent-low);
 }
+
+/* ********************** */
+/* /index.md */
+/* ********************** */
 .hero h1#_top {
   font-size: 3.2rem;
 }
@@ -94,7 +108,9 @@ span.label {
   border: 2px solid #EE827C;
 }
 
-/* promotion-tools */
+/* ********************** */
+/* /promotion-tools */
+/* ********************** */
 .pt_content_wrap h2 {
   padding: 0.7rem 0;
   position: relative;
@@ -154,4 +170,16 @@ span.label {
 .btn_anchor_icon {
   display: inline-block;
   vertical-align: text-top;
+}
+
+
+/* ********************** */
+/* /info */
+/* ********************** */
+#info-index .title {
+  font-weight: 400;
+  font-size: var(--sl-text-md);
+}
+#info-index .icon {
+  color: var(--sl-color-text-accent);
 }
