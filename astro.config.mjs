@@ -17,6 +17,8 @@ export default defineConfig({
 			},
 			customCss: [
 				'./src/assets/styles/custom.css',
+				'@fontsource/ibm-plex-sans-jp/400.css',
+				'@fontsource/ibm-plex-sans-jp/600.css',
 			],
 			locales: {
 				root: {
@@ -32,6 +34,7 @@ export default defineConfig({
 			},
 			sidebar: [
 				{ label: 'ふるさとズヘルプサイトTOP', link: '/' },
+				{ label: 'お知らせ', link: '/info/' },
 				{ label: 'よくある質問', link: '/faq/' },
 				{
 					label: '自治体関係者向け',
