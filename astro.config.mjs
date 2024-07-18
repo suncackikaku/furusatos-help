@@ -46,7 +46,8 @@ export default defineConfig({
 						{ label: '請求管理', link: '/lg/claim/' },
 						{ label: '返礼品管理', 
 							items: [
-								{ label: '返礼品の登録・編集・削除', link: '/lg/product/' },
+								{ label: '新規登録', link: '/lg/product/' },
+								{ label: '編集・削除等', link: '/lg/product_1/' },
 								{ label: 'オンラインクーポンの設定', link: '/lg/online-coupon/' },
 							]
 						},
@@ -62,7 +63,8 @@ export default defineConfig({
 						{ label: '設定', link: '/lg/setting/' },
 						{ label: 'その他', 
 							items: [
-								{ label: 'ふるさと納税do連携マニュアル', link: '/lg/furusatodo/' },
+								{ label: 'ふるさと納税do連携-初期設定', link: '/lg/furusatodo/' },
+								{ label: 'ふるさと納税do-各マスタ登録', link: '/lg/furusatodo_registrant' },
 								{ label: '銀行振込対応', link: '/lg/banktransfer/' },
 								{ label: 'コンビニ決済対応', link: '/lg/conveniencepayment/' },
 								{ label: 'ゲスト（会員登録なし）寄附', link: '/lg/guest/' },
