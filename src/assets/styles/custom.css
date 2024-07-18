@@ -5,9 +5,9 @@
   --sl-color-text-accent: #EE827C;
   --sl-color-accent-low: #f7dedc;
   --sl-text-h1: var(--sl-text-4xl);
-  --sl-text-h2: var(--sl-text-3xl);
-  --sl-text-h3: var(--sl-text-2xl);
-  --sl-text-h4: var(--sl-text-xl);
+  --sl-text-h2: var(--sl-text-2xl);
+  --sl-text-h3: var(--sl-text-xl);
+  --sl-text-h4: var(--sl-text-lg);
 }
 /* Light mode colors. */
 :root[data-theme='light'] {
@@ -15,9 +15,9 @@
   --sl-color-text-accent: #EE827C;
   --sl-color-accent-low: #f7dedc;
   --sl-text-h1: var(--sl-text-4xl);
-  --sl-text-h2: var(--sl-text-3xl);
-  --sl-text-h3: var(--sl-text-2xl);
-  --sl-text-h4: var(--sl-text-xl);
+  --sl-text-h2: var(--sl-text-2xl);
+  --sl-text-h3: var(--sl-text-xl);
+  --sl-text-h4: var(--sl-text-lg);
 
 }
 
