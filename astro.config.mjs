@@ -17,8 +17,14 @@ export default defineConfig({
 				{
           tag: 'meta',
           attrs: {
+            property: 'og:title',
+            content: '店舗型ふるさと納税®ふるさとズ ヘルプサイト',
+          },
+        },
+				{
+          tag: 'meta',
+          attrs: {
             property: 'og:image',
-            // The absolute URL of the image to use.
             content: 'https://help.furusatos.com/ogp.png',
           },
         },
