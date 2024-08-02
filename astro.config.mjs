@@ -72,7 +72,7 @@ export default defineConfig({
 							items: [
 								{ label: '新規登録', link: '/lg/product/' },
 								{ label: '編集・削除等', link: '/lg/product_1/' },
-								{ label: 'オンラインクーポンの設定', link: '/lg/online-coupon/' },
+								{ label: 'オンラインクーポンの設定', link: '/lg/online-coupon-activate/' },
 							]
 						},
 						{ label: 'チケット利用状況', link: '/lg/ticket/' },
@@ -104,6 +104,7 @@ export default defineConfig({
 						{ label: '注文管理', link: '/shops/order/' },
 						{ label: 'バーコード読取', link: '/shops/barcode/' },
 						{ label: '返礼品管理', link: '/shops/product/' },
+						{ label: 'オンラインクーポンの登録', link: '/shops/online-coupon/' },
 						{ label: '応援メッセージ', link: '/shops/message/' },
 						{ label: 'チケット利用状況', link: '/shops/ticket/' },
 						{ label: 'プロモーションツール', link: '/shops/tool/' },
