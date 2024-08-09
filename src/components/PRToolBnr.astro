@@ -1,0 +1,30 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+import json from '/public/json/banner/prToolBnr.json';
+
+const {page = "default"} = Astro.props;
+const pageProps = json[0][page];
+
+const {imgPath, alt, title, text, textLink, btnText, btnLink} = pageProps;
+
+
+---
+
+<div class="bnr_wrapper" id="js-bnr_wrapper">
+  <article class="bnr">
+    <div class="brn_inner">
+      <div class="bnr_thum">
+        <img src=`${imgPath}` alt=`${alt}`>
+      </div>
+      <div class="bnr_body">
+        <h2 class="bnr_head">{title}</h2>
+        <p class="bnr_text"><a class="bnr_textLink" href=`${textLink}`>{text}</a></p>
+        <div class="bnr_cta_btn_wrapper">
+          <a href=`${btnLink}` class="bnr_cta_btn">{btnText}</a>
+        </div>
+      </div>
+      <button class="bnr_close_btn" id="js-bnr_close_btn"><Icon name="close" /></button>
+    </div>
+  
+  </article>
+</div>

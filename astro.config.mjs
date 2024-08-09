@@ -7,6 +7,22 @@ export default defineConfig({
   base: '/',
 	integrations: [
 		starlight({
+			head: [
+				// {
+				// 	tag: 'script',
+				// 	attrs: {
+				// 		src: '/src/assets/js/script.js',
+				// 		defer: true,
+				// 	}
+				// },
+				{
+					tag: 'meta',
+          attrs: {
+            property: 'og:image',
+            content: 'https://example.com/og.png',
+          },
+				}
+			],
 			title: '店舗型ふるさと納税 ふるさとズ ヘルプサイト',
 			head: [
         {
