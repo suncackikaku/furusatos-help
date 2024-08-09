@@ -25,6 +25,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+.main-pane {
+  z-index: 2;
+}
+
 .starlight-aside--note {
   border-color: var(--sl-color-accent);
   --sl-color-asides-text-accent: var(--sl-color-text);
@@ -182,4 +186,255 @@ span.label {
 }
 #info-index .icon {
   color: var(--sl-color-text-accent);
+}
+
+/* ********************** */
+/* /floatin Navigation */
+/* ********************** */
+#top-index {
+  position: relative;
+}
+
+.floating-nav {
+  display: none;
+  position: fixed;
+  bottom: 64px;
+  right: 64px;
+  z-index: 2;
+}
+
+.floating-nav * {
+  margin-top: 0;
+}
+
+.floating-nav.is-show {
+  display: block;
+}
+
+.nav-outer {
+  background-color: #ffbfbb;
+  overflow: clip;
+  padding: 16px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  transition: scale 0.2s ease-in-out;
+}
+
+.nav-outer.is-opened {
+  padding: 0;
+}
+
+.navBtnWrap {
+  margin-top: 0 !important;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  height: 32px;
+  width: 32px;
+}
+
+#navBtn {
+  margin-top: 0 !important;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navBtn:hover {
+  cursor: pointer;
+}
+
+.nav-outer:has(#navBtn:hover):not(.is-opened) {
+  scale: 1.1;
+}
+
+.prevBtnWrap {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+}
+
+.is-opened .prevBtnWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#prevBtn {
+  margin-top: 0 !important;
+}
+
+#prevBtn.is-hide {
+  display: none;
+}
+
+.navWrap {
+  display: none;
+  /* height: 240px; */
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  margin-top: 0 !important;
+}
+
+.is-opened .navWrap {
+  display: flex;
+}
+
+.navigation-box {
+  width: 100%;
+  flex-shrink: 0;
+  /* display: none; */
+}
+
+.is-active .navigation-box {
+  display: block;
+}
+.floating-nav:hover {
+  /* cursor: pointer; */
+}
+
+/* .navigation-box:not(:first-child) {
+  display: none;
+} */
+
+.navWrap .navigation-box {
+  margin-top: 0 !important;
+  padding: 16px;
+}
+
+.navWrap .navigation-boxInner {
+  display: none;
+  margin-top: 0;
+}
+
+.navigation-boxInner.is-active {
+  display: block;
+}
+
+.articleInner {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+}
+
+/* ********************** */
+/* /PR Tool Banner*/
+/* ********************** */
+.pt_content_wrap {
+  .bnr_wrapper {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 320px;
+    display: none;
+    * {
+      margin-top: 0;
+    }
+    &.is-show {
+      display: block;
+    }
+  }
+  .bnr_thum {
+    display: none;
+  }
+  .bnr {
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 26px 0px rgba(0, 0, 0, 0.12);
+    position: relative;
+  } 
+  .bnr_body {
+    margin-top: 0;
+    padding: 1rem 1.5rem;
+  }
+  
+  .bnr_head {
+    text-align: center;
+    font-size: 1.125rem;
+    padding: 0.5rem;
+  }
+  .bnr_head::before {
+    display: none;
+  }
+  .bnr_text {
+    line-height: 1.4;
+  }
+  .bnr_textLink {
+    font-size: 0.875rem;
+    color: #333;
+    text-decoration: none;
+  }
+  .bnr_cta_btn_wrapper {
+    margin-top: 1rem;
+    padding: 0 1.5rem;
+  }
+  .bnr_cta_btn {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #333;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+  .bnr_cta_btn:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  .bnr_close_btn {
+    margin-top: 0;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    color: #EE827C;
+    background-color: #fff;
+    display: grid;
+    place-content: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+
+@media (min-width: 50rem) {
+  .pt_content_wrap {
+    .bnr_wrapper {
+      width: 400px;
+    }
+    .bnr {
+      border-radius: 10px;
+    }
+    .bnr_thum {
+      display: block;
+    }
+    .bnr_cta_btn_wrapper {
+      margin-top: 2rem;
+      padding: 0;
+    }
+    .bnr_cta_btn {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    .bnr_close_btn {
+      
+    }
+  }
 }
