@@ -1,0 +1,22 @@
+[
+  {
+    "default" : {
+      "imgPath": "/public/default/path/to/img.png",
+      "alt":"default alt",
+      "title": "default title",
+      "text": "default text",
+      "textLink": "default text link",
+      "btnText": "default btn text",
+      "btnLink": "default btn link"
+    },
+    "promotion-tools" : {
+      "imgPath": "/bnr/web_PR_Tool_bnr01.png",
+      "alt": "",
+      "title": "PRツールの作成承ります",
+      "text": "ふるさとズの利用促進に向けて、各種PRツールのご用意が可能です。お気軽にご相談ください。",
+      "textLink": "https://help.furusatos.com/pdf/furusatos_pr-tools_infomation_v5.pdf",
+      "btnText": "PRツールを依頼する",
+      "btnLink": "https://forms.gle/vnChWnGP1SpnKBxu5"
+    }
+  }
+]
