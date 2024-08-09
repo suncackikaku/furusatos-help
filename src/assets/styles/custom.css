@@ -417,7 +417,7 @@ span.label {
 @media (min-width: 50rem) {
   .pt_content_wrap {
     .bnr_wrapper {
-      width: 400px;
+      width: 320px;
     }
     .bnr {
       border-radius: 10px;
@@ -430,7 +430,7 @@ span.label {
       padding: 0;
     }
     .bnr_cta_btn {
-      padding: 1rem;
+      padding: 0.6rem;
       font-size: 1rem;
     }
     .bnr_close_btn {
