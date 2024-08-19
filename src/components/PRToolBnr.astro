@@ -33,7 +33,11 @@ const {imgPath, alt, title, text, textLink, btnText, btnLink} = pageProps;
       <div class="bnr_body">
         <h2 class="bnr_head">{title}</h2>
         <p class="bnr_text">
-          <a class="bnr_textLink" href={textLink}>{text}</a>
+          {
+            textLink === "" ? 
+            <span class="bnr_textLink">{text}</span> :
+            <a class="bnr_textLink" href={textLink}>{text}</a>
+          }
         </p>
         <div class="bnr_cta_btn_wrapper">
           <a href={btnLink} class="bnr_cta_btn">{btnText}</a>

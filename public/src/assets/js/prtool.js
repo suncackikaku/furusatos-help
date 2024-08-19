@@ -1,8 +1,14 @@
 const bnrWrap = document.getElementById('js-bnr_wrapper');
 
+const samePageList = {
+  "/promotion-tools/": ["/promotion-tools/web-assets/"],
+  "/promotion-tools/web-assets/": ["/promotion-tools/"],
+}
+
 // クローズボタン押下時のイベントハンドリングする関数
 setup = () => {
   const key = getPagePath();
+  console.log(key);
   const data = getLocaleStrage(key);
   if(data === null || isExpired(key)) { // keyが保存されていない || 保存期限を過ぎている 
     showBnr();
@@ -29,7 +35,8 @@ hideBnr = () => {
 
 // ページURLを取得する関数
 getPagePath = () => {
-  return location.pathname;
+  const path = removeHTMLFileName(location.pathname);
+  return path;
 }
 
 // ローカルストレージ（LS）の値を取得する関数
@@ -46,12 +53,25 @@ setLocalStrage = (key, value) => {
 setHideDate = (key) => {
   const visitedDay = getToday(); // 実際の動作用
   // const visitedDay = "2024/09/08"; //debug用の記述
-  const twoWeekLater = get2weekLater(visitedDay)
+
+  const twoWeekLater = get2weekLater(visitedDay);
   const obj = {
     isHideDate: visitedDay,
     twoWeekLater: twoWeekLater
   }
+
+  const samePageArr = getSamePage(key)
+  if(samePageArr) {
+    samePageArr.forEach((key) => {
+      setLocalStrage(key, JSON.stringify(obj));
+    })
+  }
   setLocalStrage(key, JSON.stringify(obj));
+
+}
+
+removeHTMLFileName = (path) => {
+  return path.replace("index.html", "");
 }
 
 // 再訪時の年月日とLSに保存された非表示とした年月日を比較する関数
@@ -65,6 +85,12 @@ isExpired = (key) => {
     return true
   } else {
     return false;
+  }
+}
+
+getSamePage = (key) => {
+  if(samePageList.hasOwnProperty(key)) {
+    return samePageList[key]
   }
 }
 
