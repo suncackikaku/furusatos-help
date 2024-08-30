@@ -76,6 +76,7 @@ export default defineConfig({
 				{ label: 'ふるさとズヘルプサイトTOP', link: '/' },
 				{ label: 'お知らせ', link: '/info/' },
 				{ label: 'よくある質問', link: '/faq/' },
+				{ label: '動画マニュアル', link: '/movie/' },
 				{
 					label: '自治体関係者向け',
 					items: [

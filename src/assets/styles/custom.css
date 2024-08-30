@@ -35,6 +35,10 @@ html {
   background-color: var(--sl-color-accent-low);
 }
 
+.sl-markdown-content :is(img, picture, video, canvas, svg, iframe):not(:where(.not-content *)) {
+  height: revert-layer;
+}
+
 /* ********************** */
 /* /index.md */
 /* ********************** */
