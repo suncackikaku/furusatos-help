@@ -29,6 +29,7 @@ import Navigation from '../../components/Navigation.astro';
 <section id="top-index">
  <Navigation />
   ## お知らせ
+  <span class="label">ニュース</span>2024/08/30｜[『ファンづくりのための』ふるさとズ ニュース。第1回](./info/240830-blog/)   
   <span class="label">レポート</span>2024/06/17｜[（現場レポート）大牟田日本フィルの会へ寄附贈呈を行いました！](./info/240617-support-pj02-02/)  
   <span class="label">レポート</span>2024/03/22｜[（現場レポート）やめスマ研究所にて寄附贈呈式を行いました！](./info/240322-support-pj01-02/)  
   <span class="label">お知らせ</span>2024/02/14｜[第2弾 地域支援活動応援プロジェクトを開始しました。](./info/240214-support-pj02-01/)  
@@ -39,11 +40,16 @@ import Navigation from '../../components/Navigation.astro';
 
   <section class="section-wrap">
     ## 管理画面マニュアル
-    <LinkCard title="自治体関係者向け" href="./lg/" />
-
+    ### 自治体向け
     <CardGrid>
-      <LinkCard title="店舗管理者向け" href="./shops/" />
-      <LinkCard title="店舗スタッフ向け" href="./staff/staff/" />
+      <LinkCard title="Web（テキスト）マニュアル" href="./lg/" />
+      <LinkCard title="動画マニュアル" href="./movie/" />
+    </CardGrid>
+
+    ### 店舗向け
+    <CardGrid>
+      <LinkCard title="店舗管理者用マニュアル" href="./shops/" />
+      <LinkCard title="店舗スタッフ用マニュアル" href="./staff/staff/" />
     </CardGrid>
   </section>
 
