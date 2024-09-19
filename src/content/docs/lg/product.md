@@ -169,5 +169,5 @@ SNSでシェアされた際に表示されるサムネイル画像を設定で�
 ![eticket.png](../../../assets/images/lg_product_09.png)
 
 店舗でのオペレーションにつきましては、下記より動画をご確認ください。  
-[電子チケットの確認方法について](https://www.notion.so/8fa70792d9cf42a49480b1fdf2f137ff?pvs=21)
+[電子チケットの確認方法について](https://youtu.be/3ypbtH8oi_Q?feature=shared)
 

@@ -76,7 +76,23 @@ export default defineConfig({
 				{ label: 'ふるさとズヘルプサイトTOP', link: '/' },
 				{ label: 'お知らせ', link: '/info/' },
 				{ label: 'よくある質問', link: '/faq/' },
-				{ label: '動画マニュアル', link: '/movie/' },
+				{ label: '動画マニュアル',
+					items: [
+						{ label: '自治体関係者向け',
+							items: [
+							{ label: '自治体関係者向けTOP', link: '/movie/lg/' },
+							{ label: 'オンラインクーポン設定方法', link: '/movie/lg/online-coupon_movie/' },
+							{ label: '金額自由入力設定方法', link: '/movie/lg/free-entry_movie/' },
+							]
+						},
+						{ label: '店舗管理者向け',
+							items: [
+							{ label: '店舗管理者向けTOP', link: '/movie/shops/' },
+							{ label: 'オンラインクーポンコード登録方法', link: '/movie/shops/online-coupon_movie_forshops/' },
+							]
+						},
+					],
+				},
 				{
 					label: '自治体関係者向け',
 					items: [
