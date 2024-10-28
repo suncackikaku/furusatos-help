@@ -14,7 +14,7 @@ Android用アプリ：[ダウンロードリンク](https://play.google.com/stor
 iPhone用アプリ  ：[ダウンロードリンク](https://apps.apple.com/app/id1632550284)
 :::
 
-以降はAndroid端末での表示画面で説明しております。
+以降はiphone端末での表示画面で説明しております。
 
 ### 1. ログイン
 
