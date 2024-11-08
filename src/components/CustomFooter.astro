@@ -3,15 +3,23 @@ import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Footer.astro';
 
 import CustomForm from './CustomForm.astro';
-import type { Code, Debug } from 'astro:components';
+import FloatBnr from './FloatBnr.astro';
+import PRContent from './PRContent.astro';
+import type { Code } from 'astro:components';
 
-const isHomepage = Astro.props.slug === '';
+const slug = Astro.props.slug;
+const isHomepage = slug === '';
 ---
+<Default {...Astro.props}>
+  <slot />
+</Default>
 
 {
-  isHomepage ? (
-    <footer></footer>
+  !isHomepage && (slug.includes("promotion-tools") ? (
+    <FloatBnr>
+      <PRContent {...Astro.props}/>
+    </FloatBnr>
   ) : (
-  <CustomForm {...Astro.props}/>
-  )
+    <CustomForm {...Astro.props} />
+  ))
 }

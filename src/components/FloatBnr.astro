@@ -27,9 +27,235 @@ const {imgPath, alt, title, text, textLink, btnText, btnLink} = pageProps;
 <div class="bnr_wrapper" id="js-bnr_wrapper">
   <article class="bnr">
     <slot />
-    <!-- <button class="submit-btn" id="send-button" type="button">！送信！</button> -->
   </article>
   <button class="bnr_close_btn" id="js-bnr_close_btn">
     <Icon name="close" />
   </button>
 </div>
+
+<script>
+
+
+const bnrWrap = document.getElementById('js-bnr_wrapper');
+const samePageList: { [key: string]: string[] } = {
+  "/promotion-tools/": ["/promotion-tools/web-assets/"],
+  "/promotion-tools/web-assets/": ["/promotion-tools/"],
+}
+
+// クローズボタン押下時のイベントハンドリングする関数
+const setupFloatBnr = (): void => {
+  const key = getPagePath();
+  const data = getLocaleStrage(key);
+  if (data === null || isExpired(key)) { // keyが保存されていない || 保存期限を過ぎている 
+    showBnr();
+  }
+
+  const btn = document.getElementById('js-bnr_close_btn');
+  btn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    hideBnr();
+    setHideDate(key);
+  });
+}
+
+// バナーを表示させる関数
+const showBnr = (): void => {
+  bnrWrap?.classList.add("is-show");
+}
+
+// バナーを非表示にする関数
+const hideBnr = (): void => {
+  bnrWrap?.classList.remove("is-show");
+}
+
+// ページURLを取得する関数
+const getPagePath = (): string => {
+  const path = removeHTMLFileName(location.pathname);
+  return path;
+}
+
+// ローカルストレージ（LS）の値を取得する関数
+const getLocaleStrage = (key: string): string | null => {
+  return localStorage.getItem(key);
+}
+
+// LSへ値を保存する関数
+const setLocalStrage = (key: string, value: string): void => {
+  localStorage.setItem(key, value);
+}
+
+// クローズボタン押下時にLSへ非表示とした年月日を保存する関数
+const setHideDate = (key: string): void => {
+  const visitedDay = getToday(); // 実際の動作用
+  // const visitedDay = "2024/09/08"; // debug用の記述
+
+  const twoWeekLater = get2weekLater(visitedDay);
+  const obj = {
+    isHideDate: visitedDay,
+    twoWeekLater: twoWeekLater
+  }
+
+  const samePageArr = getSamePage(key);
+  if (samePageArr) {
+    samePageArr.forEach((pageKey: string) => {
+      setLocalStrage(pageKey, JSON.stringify(obj));
+    });
+  }
+  setLocalStrage(key, JSON.stringify(obj));
+}
+
+const removeHTMLFileName = (path: string): string => {
+  return path.replace("index.html", "");
+}
+
+// 再訪時の年月日とLSに保存された非表示とした年月日を比較する関数
+const isExpired = (key: string): boolean => {
+  const value = JSON.parse(getLocaleStrage(key)!);
+  const today = new Date(getToday()); // 実際の動作用
+  // const today = new Date("2024/09/08"); // debug用の記述
+  const twoWeekLater = new Date(value.twoWeekLater);
+
+  return today > twoWeekLater;
+}
+
+const getSamePage = (key: string): string[] | undefined => {
+  if (samePageList.hasOwnProperty(key)) {
+    return samePageList[key];
+  }
+}
+
+// 訪問時の年月日を取得する関数
+const getToday = (): string => {
+  const visitedDay = new Date(Date.now());
+  return formatDate(visitedDay);
+}
+
+// 非表示とした年月日から2週間後の日付を取得する関数
+const get2weekLater = (today: string): string => {
+  const d_milli_sec = new Date(today).getTime();
+  const twoWeekLater = new Date(d_milli_sec + 14 * 24 * 60 * 60 * 1000);
+  return formatDate(twoWeekLater);
+}
+
+// 日付のフォーマットをyyyy/mm/ddに整える関数 
+const formatDate = (date: Date): string => {
+  const year = date.getFullYear();
+  const month = (`0${date.getMonth() + 1}`).slice(-2);
+  const day = (`0${date.getDate()}`).slice(-2);
+  return `${year}/${month}/${day}`;
+}
+
+setupFloatBnr();
+</script>
+
+<style>
+.bnr_wrapper {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 320px;
+  display: none;
+  &.__w-270 {
+    width: 270px;
+  }
+  * {
+    margin-top: 0;
+  }
+  &.is-show {
+    display: block;
+  }
+}
+.bnr_thum {
+  display: none;
+}
+.bnr {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 26px 0px rgba(0, 0, 0, 0.12);
+  position: relative;
+} 
+.bnr_body {
+  margin-top: 0;
+  padding: 1rem 1.5rem;
+}
+
+.bnr_head {
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 0.5rem;
+}
+.bnr_head::before {
+  display: none;
+}
+.bnr_text {
+  line-height: 1.4;
+}
+.bnr_textLink {
+  font-size: 0.875rem;
+  color: #333;
+  text-decoration: none;
+}
+.bnr_cta_btn_wrapper {
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+}
+.bnr_cta_btn {
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #333;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+.bnr_cta_btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+.bnr_close_btn {
+  margin-top: 0;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  color: #EE827C;
+  background-color: #fff;
+  display: grid;
+  place-content: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (min-width: 50rem) {
+  .bnr_wrapper {
+    width: 320px;
+  }
+  .bnr {
+    border-radius: 10px;
+  }
+  .bnr_thum {
+    display: block;
+  }
+  .bnr_cta_btn_wrapper {
+    margin-top: 2rem;
+    padding: 0;
+  }
+  .bnr_cta_btn {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+  .bnr_close_btn {
+  }
+}
+
+.bnr-content {
+  padding: 0.75rem;
+}
+
+</style>
