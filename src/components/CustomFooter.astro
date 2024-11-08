@@ -1,0 +1,17 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Footer.astro';
+
+import CustomForm from './CustomForm.astro';
+import type { Code, Debug } from 'astro:components';
+
+const isHomepage = Astro.props.slug === '';
+---
+
+{
+  isHomepage ? (
+    <footer></footer>
+  ) : (
+  <CustomForm {...Astro.props}/>
+  )
+}

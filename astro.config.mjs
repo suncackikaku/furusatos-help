@@ -47,6 +47,7 @@ export default defineConfig({
       ],
       components: {
         SkipLink: './src/components/SkipLink.astro',
+				Footer: './src/components/CustomFooter.astro',
       },
 			favicon: './favicon.svg',
 			logo: {
