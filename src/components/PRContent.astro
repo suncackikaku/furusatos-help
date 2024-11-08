@@ -15,8 +15,8 @@ type JsonType = Array<{ [key: string]: PageProps }>;
 
 const jsonData: JsonType = json as JsonType;
 
-const {page = "default"} = Astro.props;
-const pageProps = jsonData[0][page];
+const slug = Astro.props.slug;
+const pageProps = jsonData[0][slug] ? jsonData[0][slug] : jsonData[0]['default'];
 
 const {imgPath, alt, title, text, textLink, btnText, btnLink} = pageProps;
 
@@ -40,3 +40,99 @@ const {imgPath, alt, title, text, textLink, btnText, btnLink} = pageProps;
     </div>
   </div>
 </div>
+
+<style>
+.bnr_wrapper {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 320px;
+  display: none;
+  &.__w-270 {
+    width: 270px;
+  }
+  * {
+    margin-top: 0;
+  }
+  &.is-show {
+    display: block;
+  }
+}
+.bnr_thum {
+  display: none;
+}
+.bnr_thum img {
+  width: 100%;
+}
+.bnr {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 26px 0px rgba(0, 0, 0, 0.12);
+  position: relative;
+} 
+.bnr_body {
+  margin-top: 0;
+  padding: 1rem 1.5rem;
+}
+
+.bnr_head {
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 0.5rem;
+}
+.bnr_head::before {
+  display: none;
+}
+.bnr_text {
+  line-height: 1.4;
+}
+.bnr_textLink {
+  font-size: 0.875rem;
+  color: #333;
+  text-decoration: none;
+}
+.bnr_cta_btn_wrapper {
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+}
+.bnr_cta_btn {
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #333;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+.bnr_cta_btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+@media (min-width: 50rem) {
+  .bnr_wrapper {
+    width: 320px;
+  }
+  .bnr {
+    border-radius: 10px;
+  }
+  .bnr_thum {
+    display: grid;
+  }
+  .bnr_cta_btn_wrapper {
+    margin-top: 2rem;
+    padding: 0;
+  }
+  .bnr_cta_btn {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+}
+.bnr-content {
+  padding: 0.75rem;
+}
+
+</style>
