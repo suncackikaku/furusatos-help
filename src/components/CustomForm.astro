@@ -1,0 +1,368 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import { Icon } from '@astrojs/starlight/components';
+
+const path = Astro.url.pathname;
+---
+
+<div class="bnr_wrapper __w-270" id="js-bnr_wrapper">
+  <article class="bnr">
+    <div class="bnr-content">
+      <div class="" id="form-wrap">
+        <form action="" id="form">
+          <p class="form-title">この記事はお役に立ちましたか？</p>
+          <div class="input-wrap">
+            <div class="input-item">
+              <input type="radio" name="entry.99029456" id="answer4" value="役に立った" required>
+              <label for="answer4">役に立った</label>
+            </div>
+            <div>
+              <input type="radio" name="entry.99029456" id="answer1" value="役に立たなかった" required>
+              <label for="answer1">役に立たなかった</label>
+            </div>
+          </div>
+          <div class="input-item">
+            <label for="answer-text" class="textarea-label">ご意見ありましたら、ご記入ください。</label>
+            <textarea name="entry.1062464597" id="answer-text" cols="24" rows="3"></textarea>
+          </div>
+          <div class="send-btn-wrap">
+            <input id="send-button" class="submit-btn" type="submit" value="回答する">
+          </div>
+          <input type="hidden" id="url" name="entry.364307882" value=`${path}`>
+        </form>
+      </div>
+      <p id="thank-you-message" class="thank-you-message" style="display: none;">ご回答ありがとうございます</p>
+    </div>
+  </article>
+  <button class="bnr_close_btn" id="js-bnr_close_btn">
+    <Icon name="close" />
+  </button>
+</div>
+<script>
+const setupForm = () => {
+   document.getElementById("form")?.addEventListener("submit", function(event) {
+     event.preventDefault(); // デフォルトの送信を防止
+     
+     const formElement = this as HTMLFormElement;
+   
+     const formData = new FormData(formElement);
+     const url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfOuMSSU_QsmwmBi_ZMmI1cQmhKyPjKH5PVEbIqvu2--83ifw/formResponse";
+   
+     for (let value of formData.entries()) { 
+       console.log(value); 
+     }
+   
+     fetch(url, {
+       method: "POST",
+       mode: "no-cors",
+       body: formData
+     })
+     .then(() => {
+       const formWrap = document.getElementById("form-wrap");
+       const thankYouMessage = document.getElementById("thank-you-message");
+   
+       if (formWrap && thankYouMessage) {
+         formWrap.style.display = "none"; // 送信ボタンを非表示に
+         thankYouMessage.style.display = "block"; // 送信完了メッセージを表示
+       }
+     })
+     .catch(error => {
+       console.error("送信に失敗しました:", error);
+     });
+   });
+ }
+
+
+const bnrWrap = document.getElementById('js-bnr_wrapper');
+const samePageList: { [key: string]: string[] } = {
+  "/promotion-tools/": ["/promotion-tools/web-assets/"],
+  "/promotion-tools/web-assets/": ["/promotion-tools/"],
+}
+
+// クローズボタン押下時のイベントハンドリングする関数
+const setupFloatBnr = (): void => {
+  const key = getPagePath();
+  const data = getLocaleStrage(key);
+  if (data === null || isExpired(key)) { // keyが保存されていない || 保存期限を過ぎている 
+    showBnr();
+  }
+
+  const btn = document.getElementById('js-bnr_close_btn');
+  btn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    hideBnr();
+    setHideDate(key);
+  });
+}
+
+// バナーを表示させる関数
+const showBnr = (): void => {
+  bnrWrap?.classList.add("is-show");
+}
+
+// バナーを非表示にする関数
+const hideBnr = (): void => {
+  bnrWrap?.classList.remove("is-show");
+}
+
+// ページURLを取得する関数
+const getPagePath = (): string => {
+  const path = removeHTMLFileName(location.pathname);
+  return path;
+}
+
+// ローカルストレージ（LS）の値を取得する関数
+const getLocaleStrage = (key: string): string | null => {
+  return localStorage.getItem(key);
+}
+
+// LSへ値を保存する関数
+const setLocalStrage = (key: string, value: string): void => {
+  localStorage.setItem(key, value);
+}
+
+// クローズボタン押下時にLSへ非表示とした年月日を保存する関数
+const setHideDate = (key: string): void => {
+  const visitedDay = getToday(); // 実際の動作用
+  // const visitedDay = "2024/09/08"; // debug用の記述
+
+  const twoWeekLater = get2weekLater(visitedDay);
+  const obj = {
+    isHideDate: visitedDay,
+    twoWeekLater: twoWeekLater
+  }
+
+  const samePageArr = getSamePage(key);
+  if (samePageArr) {
+    samePageArr.forEach((pageKey: string) => {
+      setLocalStrage(pageKey, JSON.stringify(obj));
+    });
+  }
+  setLocalStrage(key, JSON.stringify(obj));
+}
+
+const removeHTMLFileName = (path: string): string => {
+  return path.replace("index.html", "");
+}
+
+// 再訪時の年月日とLSに保存された非表示とした年月日を比較する関数
+const isExpired = (key: string): boolean => {
+  const value = JSON.parse(getLocaleStrage(key)!);
+  const today = new Date(getToday()); // 実際の動作用
+  // const today = new Date("2024/09/08"); // debug用の記述
+  const twoWeekLater = new Date(value.twoWeekLater);
+
+  return today > twoWeekLater;
+}
+
+const getSamePage = (key: string): string[] | undefined => {
+  if (samePageList.hasOwnProperty(key)) {
+    return samePageList[key];
+  }
+}
+
+// 訪問時の年月日を取得する関数
+const getToday = (): string => {
+  const visitedDay = new Date(Date.now());
+  return formatDate(visitedDay);
+}
+
+// 非表示とした年月日から2週間後の日付を取得する関数
+const get2weekLater = (today: string): string => {
+  const d_milli_sec = new Date(today).getTime();
+  const twoWeekLater = new Date(d_milli_sec + 14 * 24 * 60 * 60 * 1000);
+  return formatDate(twoWeekLater);
+}
+
+// 日付のフォーマットをyyyy/mm/ddに整える関数 
+const formatDate = (date: Date): string => {
+  const year = date.getFullYear();
+  const month = (`0${date.getMonth() + 1}`).slice(-2);
+  const day = (`0${date.getDate()}`).slice(-2);
+  return `${year}/${month}/${day}`;
+}
+
+
+setupFloatBnr();
+setupForm();
+
+
+</script>
+<style>
+.bnr_wrapper {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 320px;
+  display: none;
+  &.__w-270 {
+    width: 270px;
+  }
+  * {
+    margin-top: 0;
+  }
+  &.is-show {
+    display: block;
+  }
+}
+.bnr_thum {
+  display: none;
+}
+.bnr {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 26px 0px rgba(0, 0, 0, 0.12);
+  position: relative;
+} 
+.bnr_body {
+  margin-top: 0;
+  padding: 1rem 1.5rem;
+}
+
+.bnr_head {
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 0.5rem;
+}
+.bnr_head::before {
+  display: none;
+}
+.bnr_text {
+  line-height: 1.4;
+}
+.bnr_textLink {
+  font-size: 0.875rem;
+  color: #333;
+  text-decoration: none;
+}
+.bnr_cta_btn_wrapper {
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+}
+.bnr_cta_btn {
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #333;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+.bnr_cta_btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+.bnr_close_btn {
+  margin-top: 0;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  color: #EE827C;
+  background-color: #fff;
+  display: grid;
+  place-content: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.thank-you-message {
+  font-size: 14px;
+}
+
+@media (min-width: 50rem) {
+  .bnr_wrapper {
+    width: 320px;
+  }
+  .bnr {
+    border-radius: 10px;
+  }
+  .bnr_thum {
+    display: block;
+  }
+  .bnr_cta_btn_wrapper {
+    margin-top: 2rem;
+    padding: 0;
+  }
+  .bnr_cta_btn {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+  .bnr_close_btn {
+  }
+}
+
+.bnr-content {
+  padding: 0.75rem;
+}
+#form-wrap {
+
+} 
+
+#form-wrap label {
+  font-size: 12px;
+}
+#form-wrap .form-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+#form-wrap input[type="radio"] {
+  display: none;;
+}
+
+#form-wrap .input-wrap {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#form-wrap .input-item {
+}
+#form-wrap label:not(.textarea-label) {
+  padding: 4px;
+  border: 1px solid currentColor;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+#form-wrap label:not(.textarea-label):hover {
+  cursor: pointer;
+}
+
+#form-wrap input[type="radio"]:checked + label {
+  background-color: #EE827C;
+  border-color: #EE827C;
+  color: #ffffff;
+}
+
+.textarea-label {
+}
+
+#form-wrap textarea {
+  resize: none;
+  font-size: 12px;
+  width: 100%;
+}
+
+.submit-btn {
+  font-size: 12px;
+  background-color: #ffffff;
+  border: 2px solid #EE827C;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.submit-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.send-btn-wrap {
+  text-align: right;
+}
+</style>
