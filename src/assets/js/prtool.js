@@ -8,7 +8,6 @@ const samePageList = {
 // クローズボタン押下時のイベントハンドリングする関数
 setup = () => {
   const key = getPagePath();
-  console.log(key);
   const data = getLocaleStrage(key);
   if(data === null || isExpired(key)) { // keyが保存されていない || 保存期限を過ぎている 
     showBnr();

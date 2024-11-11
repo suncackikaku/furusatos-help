@@ -2,17 +2,10 @@
 title: お役立ちツールのダウンロード
 tableOfContents: true
 description: 店舗型ふるさと納税®『ふるさとズ』のロゴや販促ツール等を一覧にしております。素材の利用に関してはガイドラインをお読みいただき、ご使用ください。
-head:
-  - tag: script
-    attrs: {
-      src: "/src/assets/js/prtool.js",
-			defer: true,
-    }
 ---
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Icon } from '@astrojs/starlight/components';
-import PRToolBnr from '../../../components/PRToolBnr.astro';
 
 <section class="pt_content_wrap">
 いつも店舗型ふるさと納税®『ふるさとズ』をご利用いただき、誠にありがとうございます。  
@@ -36,7 +29,6 @@ import PRToolBnr from '../../../components/PRToolBnr.astro';
 				QRコードが記載されているものもありますので、お客様が見やすい・読み取りのしやすい場所での掲示をオススメいたします。
 			</div>
 		</div>
-
 		**既存のお客様へのDMや郵送物の一部として**
 		<div class="col2-wrap">
 			<div class="col">
@@ -236,5 +228,4 @@ import PRToolBnr from '../../../components/PRToolBnr.astro';
 					</a>
 				</div>
 			</div>
-			<PRToolBnr page="promotion-tools" />
 </section>
