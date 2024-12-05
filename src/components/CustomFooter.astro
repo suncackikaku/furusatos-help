@@ -13,7 +13,7 @@ const isHomepage = slug === '';
 <Default {...Astro.props}>
   <slot />
 </Default>
-
+<p><small>※ヘルプサイト内の画像は、アップデート等により最新の画面と異なる場合がございます。予めご了承ください。</small></p>
 {
   !isHomepage && (slug.includes("promotion-tools") ? (
     <FloatBnr>
