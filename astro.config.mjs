@@ -141,7 +141,6 @@ export default defineConfig({
 						{ label: 'オンラインクーポンの登録', link: '/shops/online-coupon/' },
 						{ label: '応援メッセージ', link: '/shops/message/' },
 						{ label: 'チケット利用状況', link: '/shops/ticket/' },
-						{ label: 'プロモーションツール', link: '/shops/tool/' },
 						{ label: '請求管理', link: '/shops/claim/' },
 						{ label: 'スタッフ管理', link: '/shops/staff/' },
 						{ label: '個人設定', link: '/shops/setting/' },
