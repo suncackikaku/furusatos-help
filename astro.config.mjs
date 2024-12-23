@@ -82,14 +82,20 @@ export default defineConfig({
 						{ label: '自治体関係者向け',
 							items: [
 							{ label: '自治体関係者向けTOP', link: '/movie/lg/' },
-							{ label: 'オンラインクーポン設定方法', link: '/movie/lg/online-coupon_movie/' },
-							{ label: '金額自由入力設定方法', link: '/movie/lg/free-entry_movie/' },
+							{ label: '店舗登録・店舗アカウント登録／編集', link: '/movie/lg/shop_shopaccount_movie/' },
+							{ label: '返礼品登録', link: '/movie/lg/goods_movie/' },
+							{ label: '返礼品申請', link: '/movie/lg/goods_application_movie/' },
+							{ label: '使い道登録', link: '/movie/lg/donation_movie/' },
+							{ label: 'キャンセル処理', link: '/movie/lg/cancel_movie/' },
 							]
 						},
 						{ label: '店舗管理者向け',
 							items: [
 							{ label: '店舗管理者向けTOP', link: '/movie/shops/' },
-							{ label: 'オンラインクーポンコード登録方法', link: '/movie/shops/online-coupon_movie_forshops/' },
+							{ label: '返礼品受け渡し処理', link: '/movie/shops/goods_delivery_movie_forshops/' },
+							{ label: '返礼品申請機能', link: '/movie/shops/goods_application_movie_forshops/' },
+							{ label: 'オンラインクーポンコード登録', link: '/movie/shops/online-coupon_movie_forshops/' },
+							{ label: 'アカウント設定／変更', link: '/movie/shops/shopaccount_movie_forshops/' },
 							]
 						},
 					],
