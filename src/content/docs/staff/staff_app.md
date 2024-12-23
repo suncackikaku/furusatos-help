@@ -16,7 +16,7 @@ description: このページでは店舗スタッフさま向けのアプリで�
 
 :::note[店舗スタッフ専用アプリ]
 Android用アプリ：[ダウンロードリンク](https://play.google.com/store/apps/details?id=com.suncackikaku.furusatos.store)  
-iPhone用アプリ  ：[ダウンロードリンク](https://apps.apple.com/app/id1632550284)
+iPhone用アプリ  ：[ダウンロードリンク](https://apps.apple.com/jp/app/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E3%82%BA/id1632550284)
 :::
 
 以降はiphone端末での表示画面で説明しております。
