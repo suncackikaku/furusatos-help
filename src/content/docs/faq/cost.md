@@ -18,6 +18,6 @@ description: ふるさとズのプロモーションの具体施策と費用例�
 お気軽にご相談ください。 
 
 **▼また、自治体様には無料ツールも配布しています。下記リンクをご覧ください。**  
-https://promotion-tool.furusatos.com/
+https://help.furusatos.com/promotion-tools/
 
  
