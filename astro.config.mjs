@@ -169,10 +169,4 @@ export default defineConfig({
 			pagination: false,
 		}),
 	],
-	vite: {
-    optimizeDeps: {
-      noDiscovery: true,
-      include: [], // または undefined
-    },
-  },
 });
