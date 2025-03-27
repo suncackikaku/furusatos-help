@@ -115,6 +115,7 @@ export default defineConfig({
 								{ label: 'オンラインクーポンの設定', link: '/lg/online-coupon-activate/' },
 							]
 						},
+						{ label: '管理者管理', link: '/lg/account/' },
 						{ label: 'チケット利用状況', link: '/lg/ticket/' },
 						{ label: 'クラウドファンディング', link: '/lg/crowdfunding/' },
 						{ label: '寄附金の使い道管理', link: '/lg/donation/' },
